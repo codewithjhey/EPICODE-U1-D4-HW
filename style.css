@@ -12,6 +12,12 @@ body {
   top: 20vh;
   border-radius: 35px;
   overflow: hidden;
+  transition: box-shadow 1.5s;
+}
+
+#citysky-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  transition: box-shadow 0.3s;
 }
 
 #citysky-card img {
