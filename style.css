@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #5a595b;
 }
 
 #citysky-card {
@@ -10,109 +11,144 @@ body {
   margin-right: auto;
   position: relative;
   top: 20vh;
-  border-radius: 35px;
+  border-radius: 5%;
   overflow: hidden;
-  transition: box-shadow 1.5s;
+  transition: box-shadow 1s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.55);
+  transition: 1s ease;
 }
 
 #citysky-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
-  transition: box-shadow 0.3s;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px 8px rgba(110, 62, 69, 0.55);
+  transform: scale(1.1);
+  transition: 1s ease;
 }
 
 #citysky-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 #city-card-overlay {
   position: absolute;
-  background-color: #ffffff;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(142, 144, 142, 0.5) 0%,
-    rgba(0, 0, 0, 0) 50%
-  );
-}
-
-#city-sky-info-up {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#city-sky-info-down {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: white;
-  padding-left: 30px;
-  padding-bottom: 20px;
-  user-select: none;
-  text-align: right;
-  font-weight: bold;
-  font-size: 1.5em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 #bordered-save {
-  top: 20;
-  color: white;
-  padding-right: 20px;
-  padding-top: 20px;
-  user-select: none;
-  text-align: left;
-  font-weight: 900;
-  font-size: 2em;
-}
-
-#citysky-card-top-element {
+  width: 5em;
+  height: 3em;
   position: absolute;
-  width: 100px;
-  height: 80px;
-  background-color: #e60122;
-  top: 15px;
-  right: 20px;
-  border-radius: 70px/80px;
-  cursor: pointer;
-}
-
-#bordered-button {
-  position: absolute;
-  background-color: white;
-  width: 170px;
-  height: 80px;
-  bottom: 15px;
-  left: 20px;
-  border-radius: 100px/70px;
-  font-size: 1em;
-  font-weight: 600;
+  top: 1em;
+  right: 3em;
+  background-color: red;
+  border-radius: 20px 20px;
   text-align: center;
-}
-
-#circle-share {
-  position: absolute;
-  background-color: white;
-  width: 80px;
-  height: 80px;
-  bottom: 15px;
-  right: 30%;
-  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  line-height: 50px;
+  transform: translateX(10em) rotate(90deg);
+  transition: transform 0.3s;
+  user-select: none;
 }
 
 #circle-dot {
+  width: 2.5em;
+  height: 2.5em;
   position: absolute;
-  background-color: white;
-  width: 80px;
-  height: 80px;
-  bottom: 15px;
-  right: 5%;
+  bottom: 1em;
+  right: 3em;
+  background-color: rgb(255, 255, 255, 0.8);
   border-radius: 50%;
+  transform: translateY(10em) rotate(180deg);
+  transition: transform 0.3s;
+}
+
+#circle-dot .fa-solid {
+  position: relative;
+  top: 12px;
+  left: 10px;
+}
+
+#bordered-button {
+  width: 16em;
+  height: 3.5em;
+  position: absolute;
+  bottom: 1.25em;
+  right: 20em;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 20px 20px;
+  transform: translateY(200px) rotate(90deg);
+  transition: transform 0.3s;
+  user-select: none;
+  font-size: 0.7em;
+  line-height: 2.05em;
+}
+
+#bordered-button .fa-solid {
+  position: relative;
+  top: 11px;
+  left: 10px;
+  font-size: 2em;
+}
+
+#circle-share {
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  bottom: 1em;
+  right: 7em;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transform: translateY(100px) rotate(180deg);
+  transition: transform 0.3s;
+}
+
+#circle-share .fa-solid {
+  position: relative;
+  top: 12px;
+  left: 10px;
+}
+
+.text {
+  position: absolute;
+  bottom: 6px;
+  left: 37px;
+  font-size: 2.5em;
+  width: 128px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+#city-card-overlay:hover #circle-dot {
+  transform: translateY(0px);
+  transition: transform 0.3s;
+}
+
+#city-card-overlay:hover #bordered-button {
+  transform: translateY(0px);
+  transition: transform 0.3s;
+}
+
+#city-card-overlay:hover #circle-share {
+  transform: translateY(0px);
+  transition: transform 0.3s;
+}
+
+#city-card-overlay:hover #bordered-save {
+  transform: translateX(0px);
+  transition: transform 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
