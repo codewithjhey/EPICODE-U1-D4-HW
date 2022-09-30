@@ -92,8 +92,8 @@ body {
 }
 
 #bordered-button .fa-solid {
-  position: relative;
-  top: 11px;
+  position: absolute;
+  top: 1em;
   left: 10px;
   font-size: 2em;
 }
@@ -111,8 +111,8 @@ body {
 }
 
 #circle-share .fa-solid {
-  position: relative;
-  top: 12px;
+  position: absolute;
+  top: 0.9em;
   left: 10px;
 }
 
